@@ -11,13 +11,17 @@ import java.time.LocalDateTime;
 @ToString
 public class StoreForm {
 
+    private String userid;
+    private String password;
     private String name;
     private String phoneNum;
+    private String email;
     private String address;
+    private String businesslicensenumber;
     private String latitude;            //위도
     private String longitude;
 
     public Store toEntity() {
-        return new Store(null,name,phoneNum,address,latitude,longitude);
+        return new Store(null,userid,password,email,name,phoneNum,address,businesslicensenumber,latitude,longitude);
     }
 }

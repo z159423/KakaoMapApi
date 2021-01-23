@@ -66,7 +66,7 @@ public class StoreController {
 
         //model.addAttribute("username", "승환");
 
-        return "";
+        return "redirect:newStore";
     }
 
     //카카오맵 api 사용한 페이지
@@ -88,7 +88,7 @@ public class StoreController {
         log.info("가게 데이터 개수 : " + String.valueOf(storeList.size()));
         model.addAttribute("stores", storeList);
 
-        for(int i = 0; i < storeList.size(); i++)
+        /*for(int i = 0; i < storeList.size(); i++)
         {
             model.addAttribute("id" + Integer.toString(i), storeList.get(i).getId());
             model.addAttribute("name" + Integer.toString(i), storeList.get(i).getName());
@@ -98,7 +98,7 @@ public class StoreController {
             model.addAttribute("longitude" + Integer.toString(i), storeList.get(i).getLongitude());
 
             log.info("가게 데이터 베이스 확인 " + i + " " + storeList.get(i).toString());
-        }
+        }*/
 
         return "kakaomap/kakaoapitest02";
     }
